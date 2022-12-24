@@ -1,1 +1,1 @@
-PLayground for Java(Services)
+PLayground for Java(Services and Servlets)
