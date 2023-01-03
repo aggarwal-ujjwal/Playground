@@ -3,3 +3,4 @@ LinkedIn Saved Posts
 Blind
 Bookmarks
 Starred Repos
+Notes
