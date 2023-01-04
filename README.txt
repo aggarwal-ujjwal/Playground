@@ -4,3 +4,4 @@ Blind
 Bookmarks
 Starred Repos
 Notes
+Blind
