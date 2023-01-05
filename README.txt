@@ -5,3 +5,4 @@ Bookmarks
 Starred Repos
 Notes
 Blind
+Coursera
