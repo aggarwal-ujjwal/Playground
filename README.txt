@@ -1,4 +1,4 @@
-PLayground for Java (Services)
+Playground for Java (Services)
 LinkedIn Saved Posts
 Blind
 Bookmarks
