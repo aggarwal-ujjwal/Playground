@@ -7,4 +7,5 @@ Notes
 Blind
 Coursera
 Sublime
-LLD,HLD
+LLD
+HLD
