@@ -3,8 +3,7 @@ LinkedIn Saved Posts
 Blind
 Bookmarks
 Starred Repos
-Notes
+Sublime,Notes
 Blind
 Coursera
-Sublime
 LLD,HLD,OOPS,DBMS
