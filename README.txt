@@ -7,7 +7,4 @@ Notes
 Blind
 Coursera
 Sublime
-LLD
-HLD
-OOPS
-DBMS
+LLD,HLD,OOPS,DBMS
