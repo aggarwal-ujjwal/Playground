@@ -9,6 +9,7 @@ public class NumberReadability {
         else
             System.out.println("Not equal");
         System.out.println(num2+num1);
-
+        /* a strange /* // /* single-line comment */
+        
     }
 }
