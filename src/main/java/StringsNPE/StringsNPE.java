@@ -13,5 +13,6 @@ public class StringsNPE {
         str2 = str1;                     // #4
 
         System.out.println(str2);
+        System.out.printf("Display a Number %.2f", 15.23);
     }
 }
