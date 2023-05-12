@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ReadFile {
     public static void main(String[] args) {
-        String filename = "Error.txt";
+        String filename = "C://Users//ujjwa//IdeaProjects/Playground/src/main/resources/Error.txt";
         Map<Integer, Integer> wordLengthCount = new HashMap<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
