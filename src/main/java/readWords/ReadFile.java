@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class ReadFile {
     public static void main(String[] args) {
         String filename = "C://Users//ujjwa//IdeaProjects/Playground/src/main/resources/Error.txt";
