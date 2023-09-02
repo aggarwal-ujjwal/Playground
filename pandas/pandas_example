@@ -68,3 +68,14 @@ def article_views(views: pd.DataFrame) -> pd.DataFrame:
     df = df.sort_values(by='id')
     return df.drop_duplicates()
 
+Q.5
+
+import pandas as pd
+
+def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
+    df = tweets[tweets['content'].str.len() > 15]
+    return df[['tweet_id']]
+
+select tweet_id
+from Tweets
+WHERE CHAR_LENGTH(content)>15
