@@ -10,3 +10,30 @@ import pandas as pd
 def find_products(products: pd.DataFrame) -> pd.DataFrame:
     df = products[(products['low_fats'] == 'Y') & (products['recyclable'] == 'Y')]
     return df[['product_id']]
+
+
+# Write your MySQL query statement below
+# SELECT name as Customers
+# FROM Customers
+# INNER JOIN Orders
+# ON Customers.id = Orders.customerId
+
+#The above inner join won't work as it will not give us the desired names, instead the complete opposite
+
+
+# Sol1
+# SELECT name as Customers
+# FROM Customers
+# WHERE Customers.id NOT IN (SELECT customerId from Orders)
+
+# #Sol2
+# Select name as customers
+# FROM Customers
+# LEFT JOIN Orders
+# On Customers.id= Orders.customerId
+# WHERE customerId is NULL
+
+#Sol3
+SELECT name as Customers
+FROM Customers
+WHERE NOT EXISTS (SELECT 1 FROM orders WHERE Customers.id= Orders.customerId)
