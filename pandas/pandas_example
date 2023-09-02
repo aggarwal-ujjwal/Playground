@@ -51,3 +51,20 @@ def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFram
     df = df[df['customerId'].isna()]
     df = df[['name']].rename(columns={'name': 'Customers'})
     return df
+
+
+
+Q.4
+# Write your MySQL query statement below
+Select DISTINCT author_id as id
+from Views
+where author_id=viewer_id ORDER BY author_id
+
+import pandas as pd
+
+def article_views(views: pd.DataFrame) -> pd.DataFrame:
+    df = views[views['author_id']==views['viewer_id']]
+    df = df[['author_id']].rename(columns={'author_id':'id'})
+    df = df.sort_values(by='id')
+    return df.drop_duplicates()
+
