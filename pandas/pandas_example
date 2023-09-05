@@ -99,3 +99,5 @@ def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
     result_df = employees[['employee_id', 'bonus']].sort_values(by='employee_id', ascending=True)
 
     return result_df
+
+Q.7
