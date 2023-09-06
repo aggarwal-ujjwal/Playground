@@ -112,3 +112,15 @@ def fix_names(users: pd.DataFrame) -> pd.DataFrame:
     users['name'] =  users['name'].str.capitalize()
     df = users.sort_values(by='user_id', ascending=True)
     return df[['user_id','name']]
+
+Without using capitalize
+
+# Solution 2
+def fix_names(users: pd.DataFrame) -> pd.DataFrame:
+    users['str1'] = users['name'].str.slice(0,1).str.upper()
+    # print( users['str1'])
+    users['str2'] = users['name'].str.slice(1).str.lower()
+    # print( users['str2'])
+    users['name'] = users['str1'] + users['str2']
+    df = users.sort_values(by='user_id', ascending=True)
+    return df[['user_id','name']]
