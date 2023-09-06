@@ -101,3 +101,14 @@ def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
     return result_df
 
 Q.7
+# Write your MySQL query statement below
+Select user_id , CONCAT(UPPER(SUBSTR(name,1,1)),LOWER(SUBSTR(name,2))) as name
+FROM users
+ORDER BY user_id
+
+import pandas as pd
+
+def fix_names(users: pd.DataFrame) -> pd.DataFrame:
+    users['name'] =  users['name'].str.capitalize()
+    df = users.sort_values(by='user_id', ascending=True)
+    return df[['user_id','name']]
