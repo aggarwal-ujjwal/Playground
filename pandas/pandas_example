@@ -126,3 +126,16 @@ def fix_names(users: pd.DataFrame) -> pd.DataFrame:
     return df[['user_id','name']]
 
 Q.8
+
+SELECT
+  *
+FROM
+  Users
+WHERE
+  mail REGEXP '^[a-zA-Z][a-zA-Z0-9_.-]*@leetcode[.]com$';
+
+import pandas as pd
+
+def valid_emails(users: pd.DataFrame) -> pd.DataFrame:
+    users = users[users['mail'].str.match(r'^[A-Za-z][\w.-]*@leetcode\.com')]
+    return users
