@@ -124,3 +124,5 @@ def fix_names(users: pd.DataFrame) -> pd.DataFrame:
     users['name'] = users['str1'] + users['str2']
     df = users.sort_values(by='user_id', ascending=True)
     return df[['user_id','name']]
+
+Q.8
