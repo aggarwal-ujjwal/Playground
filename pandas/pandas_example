@@ -139,3 +139,10 @@ import pandas as pd
 def valid_emails(users: pd.DataFrame) -> pd.DataFrame:
     users = users[users['mail'].str.match(r'^[A-Za-z][\w.-]*@leetcode\.com')]
     return users
+
+Q,9
+SELECT * FROM patients WHERE conditions REGEXP '\\bDIAB1'
+or
+SELECT * FROM PATIENTS WHERE
+CONDITIONS LIKE '% DIAB1%' OR
+CONDITIONS LIKE 'DIAB1%';
