@@ -157,10 +157,10 @@ def find_patients(patients: pd.DataFrame) -> pd.DataFrame:
 Q.
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN
-    DECLARE result INT;
-    SELECT DISTINCT salary Into result from Employee ORDER BY salary DESC LIMIT 1;
+SET N = N-1;
   RETURN (
-      # Write your MySQL query statement below.
-        result
+      SELECT DISTINCT(salary) from Employee order by salary DESC
+      LIMIT 1 OFFSET N
+
   );
 END
