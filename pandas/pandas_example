@@ -164,3 +164,18 @@ SET N = N-1;
 
   );
 END
+
+#Sol2
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+DECLARE Result INT;
+
+SET N = N-1;
+
+SELECT DISTINCT(salary) into Result from Employee order by salary DESC
+      LIMIT 1 OFFSET N;
+  RETURN (
+
+      result
+  );
+END
