@@ -231,3 +231,5 @@ def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
     else:
         sechighest = None
     return pd.DataFrame({'SecondHighestSalary':[sechighest]})
+
+Q.12
