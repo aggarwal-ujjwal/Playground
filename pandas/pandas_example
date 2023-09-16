@@ -220,3 +220,14 @@ SELECT IFNULL((SELECT DISTINCT Salary
 				 LIMIT 1 OFFSET 1),NULL) AS SecondHighestSalary
 
 #pandas
+import pandas as pd
+
+def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
+    unique_salary = employee['salary'].drop_duplicates()
+    sorted_salary = unique_salary.sort_values(ascending=False)
+    #print(sorted_salary)
+    if len(sorted_salary) >= 2:
+        sechighest = sorted_salary.iloc[1]  # Get the second element (0-based index)
+    else:
+        sechighest = None
+    return pd.DataFrame({'SecondHighestSalary':[sechighest]})
