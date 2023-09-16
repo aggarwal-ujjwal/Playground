@@ -214,3 +214,8 @@ def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
 
 Q.11
 
+SELECT IFNULL((SELECT DISTINCT Salary
+	             FROM Employee
+				 ORDER BY Salary DESC
+				 LIMIT 1 OFFSET 1),NULL) AS SecondHighestSalary
+
