@@ -298,3 +298,28 @@ def delete_duplicate_emails(person: pd.DataFrame) -> None:
     person.sort_values(by='id',ascending=True,inplace=True)
     # Drop the duplicates based on email.
     person.drop_duplicates(subset='email', keep='first', inplace=True)
+
+Q.15
+# Write your MySQL query statement below
+#here in second part of select statement, we are assigning  value to a new column
+
+SELECT product_id, 'store1' as store, store1 as price
+from products
+WHERE store1 IS NOT NULL
+UNION
+SELECT product_id, 'store2' as store, store2 as price
+from products
+WHERE store2 IS NOT NULL
+UNION
+SELECT product_id, 'store3' as store, store3 as price
+from products
+WHERE store3 IS NOT NULL
+
+#pandas
+import pandas as pd
+
+def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
+
+    return pd.melt(
+        products, id_vars='product_id', var_name='store', value_name='price'
+    ).dropna()
