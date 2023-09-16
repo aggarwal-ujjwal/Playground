@@ -244,3 +244,18 @@ WHERE (Employee.departmentId, Employee.salary) IN (
 )
 ORDER BY salary DESC
 
+#pandas
+import pandas as pd
+
+def department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) -> pd.DataFrame:
+    df = employee.merge(department, left_on='departmentId', right_on='id', how='inner')
+    columns_to_drop = ['id_x', 'id_y','departmentId']
+    df = df.drop(columns=columns_to_drop)
+    df = df.rename(columns={'name_x':'Employee','name_y':'Department','salary':'Salary'})
+    # Reorder the columns
+    desired_order = ['Department', 'Employee', 'Salary']
+    df = df[desired_order]
+
+    df = df.groupby('Department').apply(lambda x: x[x['Salary'] == x['Salary'].max()])
+    return df
+
