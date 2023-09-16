@@ -285,3 +285,16 @@ def order_scores(scores: pd.DataFrame) -> pd.DataFrame:
     result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 
     return result_df
+
+Q.14
+delete p1 from person p1,person p2
+where p1.email=p2.email and p1.id>p2.id;
+
+#pandas
+import pandas as pd
+
+# Modify Person in place
+def delete_duplicate_emails(person: pd.DataFrame) -> None:
+    person.sort_values(by='id',ascending=True,inplace=True)
+    # Drop the duplicates based on email.
+    person.drop_duplicates(subset='email', keep='first', inplace=True)
