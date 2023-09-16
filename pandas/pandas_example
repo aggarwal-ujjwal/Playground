@@ -259,3 +259,10 @@ def department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) 
     df = df.groupby('Department').apply(lambda x: x[x['Salary'] == x['Salary'].max()])
     return df
 
+Q.13
+
+# not ans but rank concept added
+SELECT score,
+       RANK() OVER (ORDER BY score DESC) AS ranks
+FROM scores;
+
