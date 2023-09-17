@@ -346,3 +346,5 @@ def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
     result_table = pd.DataFrame(rearranged_rows, columns=['product_id', 'store', 'price'])
 
     return result_table
+
+Q14
