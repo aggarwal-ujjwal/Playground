@@ -349,4 +349,5 @@ def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
 
 Q.16
 
+
 #SQL
